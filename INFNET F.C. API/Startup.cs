@@ -18,7 +18,7 @@ namespace INFNET_F.C._API
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            Configuration = configuration; s
         }
 
         public IConfiguration Configuration { get; }
