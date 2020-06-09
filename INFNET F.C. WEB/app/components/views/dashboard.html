@@ -1,0 +1,29 @@
+﻿<!--
+    Definir como ficará a imagem da dashboard
+-->
+
+<div id="view-dashboard">
+
+
+    <div class="col-md-4 col-sm-4 col-xs-4" style="margin-top:15px;">
+        <!--style="margin-top:15px; margin-left:10%; width:320px;-->
+        <p style="font-size: 15px; text-align: center; color:indianred"> Próximos jogos </p>
+        <div ng-repeat="partida in proximosJogos">
+            <div>
+                <p style="font-size:15px; font-weight:bold; text-align:center">{{partida.campeonatO_FK.nome}}</p>
+                <p style="font-size: 11px; text-align:center">{{partida.dT_PARTIDA | date : format : shortDate}}</p>
+            </div>
+            <div style="margin-right:auto; margin-left:auto; width:230px;">
+                <img ng-src="../../../Content/img/{{partida.mandantE_FK.escudo}}" style="width: 90px; height: 90px; margin-right: 20px;" />
+                <span class="time-vs">X</span>
+                <img ng-src="../../../Content/img/{{partida.visitantE_FK.escudo}}" style="width:90px; height: 90px;" />
+            </div>
+            <hr>
+        </div>
+    </div>
+    <section class="col-md-8 col-sm-8 col-xs-8 init item-lista" style="margin-top:15px;">
+        <p style="font-size: 15px; text-align: center; color:darkblue"> Notícias mais relevantes </p>
+        <div class="row"> <section class="col-md-6 col-sm-6 col-xs-12 col-margin"> <a href="#" class="link-title" title="a pandemia"> <h3 class="third">A pandemia provocada pelo avanço do novo coronavírus cria um cenário de solidariedade no futebol brasileiro.</h3> <p>Ingressos solidários viram fontes de receita para funcionários dos clubes.</p> </a> <span class="credito-posts"> Redação </span> <span class="data-posts"> 12 de maio de 2020 | 21h46 </span> </section> <section class="col-md-6 col-sm-6 col-xs-12" style="margin-top:70px;"> <figure class=" image-ultimas"> <a href="#"> <img class="elazy event-lazy-load loaded" style="width:300px;" data-src-desktop="https://s2.glbimg.com/kuU5jHZoFdKnXxRY5SRbV2OHVzA=/0x0:1080x608/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/Q/C/FUcxfwSum6rcRKRJIqPA/carrossel-ingressos-solidarios.jpg" src="https://s2.glbimg.com/kuU5jHZoFdKnXxRY5SRbV2OHVzA=/0x0:1080x608/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/Q/C/FUcxfwSum6rcRKRJIqPA/carrossel-ingressos-solidarios.jpg" alt="a" title=""> </a> </figure> </section> </div>
+        <div class="row" style="margin-top:15px;"> <section class="col-md-6 col-sm-6 col-xs-12 col-margin"> <a href="#" class="link-title" title="a pandemia"> <h3 class="third">O clube de regatas infnet f.c. promete voltar com tudo na partida que terá contra o flamengo.</h3> <p>Os ingressos já estão quase esgotando.</p> </a> <span class="credito-posts"> Redação </span> <span class="data-posts"> 05 de junho de 2020 | 16h31 </span> </section> <section class="col-md-6 col-sm-6 col-xs-12" style="margin-top:30px;"> <figure class=" image-ultimas"> <a href="#"> <img class="elazy event-lazy-load loaded" style="width:200px;" data-src-desktop="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ18EN6_iP76sdKxrN6Gd94MQLJ-u7W2R_1jDdb6znLNIMMKKut0EuG4U17d548_opIpUqGDGs&amp;s" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ18EN6_iP76sdKxrN6Gd94MQLJ-u7W2R_1jDdb6znLNIMMKKut0EuG4U17d548_opIpUqGDGs&amp;s" alt="a" title=""> </a> </figure> </section> </div>
+    </section>
+</div>

@@ -1,0 +1,123 @@
+﻿<!--
+    Definir como ficará a logo do cliente no sidebar menu
+-->
+<div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed">
+    <nav id="sidebar">
+        <div id="sidebar-scroll">
+            <div class="sidebar-content">
+                <div class="side-header side-content bg-white-op padding-5 padding-10-l padding-5-t hidden-sm">
+                    <div class="col-md-12 col-xs-10 remove-padding-l">
+                        <a class="text-white" ui-sref="logado.dashboard">
+                            <img src="../../../Content/img/infnet-escudo.png" class="push-10-t push-10-r pull-left" style="width: 20%;" />
+                            <div class="push-10-t hidden-xs">
+                                <p class="sidebar-mini-hide font-s13 font-w700">
+                                    INFNET<br />
+                                    <span class="font-s11 font-w400">DE FUTEBOL E REGATAS</span>
+                                </p>
+                            </div>
+                            <div class="push-20-t hidden-md hidden-lg">
+                                <p class="sidebar-mini-hide font-s13 font-w700">
+                                    INFNET<br />
+                                    <span class="font-s11 font-w400">DE FUTEBOL E REGATAS</span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-2 hidden-md hidden-lg">
+                        <!--<button class="btn btn-link text-gray pull-right" type="button" data-toggle="layout" data-action="sidebar_close">
+                            <i class="fa fa-times"></i>
+                        </button>-->
+                        <button class="btn btn-link text-gray pull-right padding-20-t padding-20 push-5-t" type="button" data-toggle="layout" data-action="sidebar_close" enabled>
+                            <i class="fa fa-times font-s16"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="side-header side-content bg-white-op padding-5 padding-10-l padding-5-t hidden-xs hidden-lg hidden-md">
+                    <div class="col-sm-10">
+                        <a class="text-white" ui-sref="logado.dashboard">
+                            <img src="../../../Content/img/infnet-escudo.png" class="push-10-t push-10-r pull-left" style="width: 20%;" />
+                            <div class="push-50-t">
+                                <p class="sidebar-mini-hide font-s20 font-w700">
+                                    INFNET<br />
+                                    <span class="font-s16 font-w400">DE FUTEBOL E REGATAS</span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-2">
+                        <button class="btn btn-link text-gray pull-right padding-40-t padding-40 push-20-t" type="button" data-toggle="layout" data-action="sidebar_close">
+                            <i class="fa fa-times font-s20"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="side-content">
+                    <ul class="nav-main">
+                        <li ng-repeat="menu in logado.menus">
+                            <a  class="cursor-pointer" ng-href="{{'#/logado' + menu.rotA_MENU}}">
+                                <!-- Definir as classes dos icones no banco de dados -->
+                                <i class="{{menu.icone}}" ng-class="menu.iconemenu"></i>
+                                <span class="sidebar-mini-hide" ng-bind="menu.nomE_MENU"></span>
+                            </a>
+                            <!--<ul ng-if="menu.Submenus.length > 0">
+                                <li ng-repeat="submenu in menu.Submenus">
+                                    <a ng-class="{'nav-submenu':submenu.Paginas.length > 0}" ng-bind="submenu.Nome" class="cursor-pointer" data-toggle="nav-submenu" toggle-submenu ng-href="{submenu.Paginas.length > 0 ? '' : '#/logado' + submenu.Rota}"></a>
+                                    <ul ng-if="submenu.Paginas.length > 0">
+                                        <li ng-repeat="subsubmenu in submenu.Paginas">
+                                            <a ng-bind="subsubmenu.Nome" ng-href="{'#/logado' + subsubmenu.Rota}"></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>-->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header id="header-navbar" class="content-mini content-mini-full">
+        <!-- Header Navigation Right -->
+        <ul class="nav-header pull-right">
+            <li>
+                <div class="btn-group">
+                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" enabled>
+                        <i class="si si-user push-5-r"></i>
+                        <span ng-bind="logado.usuario.nome"></span>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li>
+                            <a ng-click="logado.logout()" tabindex="-1" href="javascript:void(0);">
+                                <i class="si si-logout pull-right"></i>Sair
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+        <!-- Header Navigation Left -->
+        <ul class="nav-header pull-left">
+            <li class="hidden-md hidden-lg">
+                <button class="btn btn-default" data-toggle="layout" data-action="sidebar_toggle" type="button">
+                    <i class="fa fa-navicon"></i>
+                </button>
+            </li>
+            <li class="hidden-xs hidden-sm">
+                <button class="btn btn-default" data-toggle="layout" data-action="sidebar_mini_toggle" type="button">
+                    <i class="fa fa-ellipsis-v"></i>
+                </button>
+            </li>
+        </ul>
+    </header>
+    <section class="ui-view-container">
+        <main id="main-container" ui-view></main>
+    </section>
+    <footer id="page-footer" class="content-mini content-mini-full font-s12 page-footer-alternative clearfix">
+        <div class="pull-right">
+            Desenvolvido por Renan Machado
+        </div>
+    </footer>
+</div>
+<script>
+    App.init();
+</script>

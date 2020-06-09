@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html ng-app="MainModule" ng-controller="MasterController as master">
+<head>
+    <meta charset="utf-8">
+
+    <title>INFNET FUTEBOL CLUB</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+
+    <!-- Page JS Plugins CSS -->
+    <link href="Content/js/lib/plugins/slick/slick.min.css" rel="stylesheet" />
+    <link href="Content/js/lib/plugins/slick/slick-theme.min.css" rel="stylesheet" />
+    <link href="Content/js/lib/plugins/summernote/summernote.css" rel="stylesheet" />
+
+    <!-- Bootstrap and OneUI CSS framework -->
+    <link href="Content/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="Content/css/lib/oneui.css" rel="stylesheet">
+    <link href="Content/css/less/custom-admin.min.css" rel="stylesheet" />
+    <link href="Content/css/lib/gsdk-bootstrap-wizard.css" rel="stylesheet" />
+    <link href="Content/js/lib/plugins/woocommerce-FlexSlider-690832b/flexslider.css" rel="stylesheet" />
+    <link href="Content/js/lib/plugins/woocommerce-FlexSlider-690832b/flexslider-rtl.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- SweetAlert -->
+    <link href="Content/css/lib/sweetalert.min.css" rel="stylesheet">
+</head>
+<body class="infnet">
+
+    <main ui-view></main>
+
+    <!-- JS Core -->
+    <script src="Content/js/lib/core/jquery-1.11.3.js"></script>
+    <script src="Content/js/lib/core/bootstrap.min.js"></script>
+    <script src="Content/js/lib/core/jquery.slimscroll.min.js"></script>
+    <script src="Content/js/lib/core/jquery.scrollLock.min.js"></script>
+    <script src="Content/js/lib/core/jquery.appear.min.js"></script>
+    <script src="Content/js/lib/core/jquery.countTo.min.js"></script>
+    <script src="Content/js/lib/core/jquery.placeholder.min.js"></script>
+    <script src="Content/js/lib/core/js.cookie.min.js"></script>
+    <script src="Content/js/lib/core/jquery.flexslider-min.js"></script>
+
+
+    <!-- JS Plugins -->
+    <script src="Content/js/lib/plugins/jquery-mask/jquery.mask.min.js"></script>
+    <script src="Content/js/lib/plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script src="Content/js/lib/plugins/bootstrap-notify/bootstrap-notify.min.js"></script>
+    <script src="Content/js/lib/plugins/sweetalert/sweetalert.min.js"></script>
+    <script src="Content/js/lib/plugins/jquery-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+    <script src="Content/js/lib/plugins/summernote/summernote.min.js"></script>
+    <script src="Content/js/lib/plugins/momentjs/moment-with-locales.min.js"></script>
+    <script src="Content/js/lib/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script src="Content/js/lib/plugins/easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="Content/js/lib/plugins/slick/slick.min.js"></script>
+    <script src="Content/js/lib/plugins/chartjs/Chart.min.js"></script>
+    <script src="Content/js/lib/plugins/woocommerce-FlexSlider-690832b/jquery.flexslider-min.js"></script>
+
+    <!--Init Helper -->
+    <script src="Content/js/lib/app.js"></script>
+
+    <!-- App Core-->
+    <script src="app/lib/core/angular.min.js"></script>
+    <script src="app/lib/core/angular-animate.min.js"></script>
+    <script src="app/lib/core/angular-locale.min.js"></script>
+    <script src="app/lib/core/angular-sanitize.min.js"></script>
+    <script src="app/lib/core/angular-ui-router.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.js"></script>
+
+    <!-- App Plugins-->
+    <script src="app/lib/plugins/angular-csv/ng-csv.min.js"></script>
+    <script src="app/lib/plugins/angular-input-masks/masks.min.js"></script>
+    <script src="app/lib/plugins/componente-imagem/angular/js/app.js"></script>
+    <script src="app/lib/plugins/componente-datatable/app.js"></script>
+
+    <!-- App -->
+    <script src="app/app.js"></script>
+
+    <!-- Shared -->
+    <script src="app/shared/filters/utilFilters.js"></script>
+    <script src="app/shared/services/formValidationService.js"></script>
+    <script src="app/shared/services/handlerFactory.js"></script>
+    <script src="app/shared/services/handlerFactoryLogado.js"></script>
+    <script src="app/shared/services/handlerFactoryPublico.js"></script>
+    <script src="app/shared/services/httpCancelService.js"></script>
+    <script src="app/shared/services/httpInterceptorFactory.js"></script>
+    <script src="app/shared/services/notificationService.js"></script>
+    <script src="app/shared/services/tokenService.js"></script>
+    <script src="app/shared/services/usuarioService.js"></script>
+    <script src="app/shared/services/utilService.js"></script>
+
+    <script src="app/shared/directives/attributesDirectives.js"></script>
+    <script src="app/shared/directives/elementsDirectives.js"></script>
+    <script src="app/shared/directives/menuDirective.js"></script>
+    <script src="app/shared/directives/fileReadDirective.js"></script>
+
+
+    <!-- Components/Controller -->
+    <script src="app/components/controllers/masterController.js"></script>
+    <script src="app/components/controllers/login/loginController.js"></script>
+    <script src="app/components/controllers/logado/masterLogadoController.js"></script>
+    <script src="app/components/controllers/logado/wizard/wizardController.js"></script>
+    <script src="app/components/controllers/logado/suporte/suporteController.js"></script>
+    <script src="app/components/controllers/logado/dashboardController.js"></script>
+    <script src="app/components/controllers/logado/financeiro/financeiroController.js"></script>
+</body>
+</html>

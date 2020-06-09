@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INFNET F.C. API", "INFNET F.C. API\INFNET F.C. API.csproj", "{3DD7F235-963C-45B5-8488-46E98E566123}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "INFNET F.C. API", "INFNET F.C. API\INFNET F.C. API.csproj", "{3DD7F235-963C-45B5-8488-46E98E566123}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INFNET F.C. WEB", "INFNET F.C. WEB\INFNET F.C. WEB.csproj", "{FA2BE7FC-947C-4477-BD75-E1E76CF802A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INFNET F.C. WEB.Tests", "INFNET F.C. WEB.Tests\INFNET F.C. WEB.Tests.csproj", "{08A4DEF5-EDD1-43C7-BEA6-28F40F19BBE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{3DD7F235-963C-45B5-8488-46E98E566123}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DD7F235-963C-45B5-8488-46E98E566123}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DD7F235-963C-45B5-8488-46E98E566123}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA2BE7FC-947C-4477-BD75-E1E76CF802A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA2BE7FC-947C-4477-BD75-E1E76CF802A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA2BE7FC-947C-4477-BD75-E1E76CF802A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA2BE7FC-947C-4477-BD75-E1E76CF802A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08A4DEF5-EDD1-43C7-BEA6-28F40F19BBE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08A4DEF5-EDD1-43C7-BEA6-28F40F19BBE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08A4DEF5-EDD1-43C7-BEA6-28F40F19BBE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08A4DEF5-EDD1-43C7-BEA6-28F40F19BBE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

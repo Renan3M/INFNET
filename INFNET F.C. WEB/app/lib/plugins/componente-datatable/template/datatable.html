@@ -1,0 +1,54 @@
+﻿<div class="row">
+
+    <div class="col-md-12" ng-if="searchFilters.length">
+        <div class="row">
+            <div ng-repeat="s in searchFilters" class="col-md-4">
+                <input class="form-control" type="text" ng-model="s.model" />
+                <button class="btn btn-secondary btn-sm pull-right push-5-t" ng-click="search(s)" ng-bind="s.buttonLabel"></button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="select-resultados-pagina">Mostrar</label>
+                    <div>
+                        <select class="form-control" id="select-resultados-pagina" name="select-resultados-pagina" size="1" ng-model="resultsPerPage" ng-init="resultsPerPage = '10'" ng-change="loadResults(resultsPerPage)">
+                            <option value="10">10 resultados</option>
+                            <option value="25">25 resultados</option>
+                            <option value="50">50 resultados</option>
+                            <option value="100">100 resultados</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-md-offset-2">
+                <button class="btn btn-tertiary btn-sm pull-right push-5-l" ng-class="{'disabled' : currPage == lastPage}" ng-click="nextPage()">Próxima</button>
+                <button class="btn btn-tertiary btn-sm pull-right" ng-class="{'disabled' : currPage == 1}" ng-click="prevPage()">Anterior</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="remove-margin">
+                    Página atual: {{currPage}} de {{lastPage}}
+                </p>
+
+                <!--<ul class="clearfix" style="list-style-type:none;">
+                    <li ng-repeat="p in pages" ng-if="$index + 1 < currPage + 3 && $index + 1 > currPage - 3" class="pull-left push-10-r">
+                        <a href="javascript:void(0);" ng-bind="p" ng-click="goToPage(p)" ng-class="{'currentPage': p == currPage}"></a>
+                    </li>
+                </ul>-->
+            </div>
+            <div class="col-md-6">
+                <p class="remove-margin pull-right">
+                    <a href="javascript:void(0);" ng-click="goToPage(1)" ng-class="{'currentPage': 1 == currPage}">Primeira</a>
+                    &nbsp;|&nbsp;
+                    <a href="javascript:void(0);" ng-click="goToPage(lastPage)" ng-class="{'currentPage': lastPage == currPage}">Última</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

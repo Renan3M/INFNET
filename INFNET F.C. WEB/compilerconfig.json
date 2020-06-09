@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "app/shared/services/handlerFactory.es5.js",
+    "inputFile": "app/shared/services/handlerFactory.js"
+  },
+  {
+    "outputFile": "app/shared/services/handlerFactoryPublico.es5.js",
+    "inputFile": "app/shared/services/handlerFactoryPublico.js"
+  },
+  {
+    "outputFile": "Content/css/less/custom-admin.css",
+    "inputFile": "Content/css/less/custom-admin.less"
+  }
+]

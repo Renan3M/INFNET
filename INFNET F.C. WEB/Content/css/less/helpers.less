@@ -1,0 +1,227 @@
+﻿/*Lista de classes para auxiliar no layout das páginas*/
+
+
+//Fix botao
+.btn { font-weight: normal; }
+
+.sidebar-mini {
+    #sidebar {
+        img#bfr-logo { visibility: visible; }
+        &:hover {
+            img#bfr-logo { visibility: hidden; }
+        }
+    }
+}
+//Customização input
+.form-control, .input-group-addon { border-color:#BBB; }
+
+//Animação durante troca de views
+.ui-view-container { position: relative; }
+[ui-view].ng-enter, [ui-view].ng-leave { position: absolute; left: 0; right: 0; -webkit-transition: all .5s ease-in-out; -moz-transition: all .5s ease-in-out; -o-transition: all .5s ease-in-out; transition: all .5s ease-in-out; }
+[ui-view].ng-enter { opacity: 0; }
+[ui-view].ng-enter-active { opacity: 1; }
+[ui-view].ng-leave { opacity: 1; }
+[ui-view].ng-leave-active { opacity: 0; }
+
+.block { box-shadow: 0 0 10px -2px #515a5f; }
+.margin-center { margin: 0 auto; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+/*Customização de margens*/
+.push-1-t { margin-top: 1px; }
+.push-2-t { margin-top: 2px; }
+.push-3-t { margin-top: 3px; }
+.push-4-t { margin-top: 4px; }
+
+.push-1 { margin-bottom: 1px; }
+.push-2 { margin-bottom: 2px; }
+.push-3 { margin-bottom: 3px; }
+.push-4 { margin-bottom: 4px; }
+
+/*Customização do cursor*/
+.cursor-pointer { cursor: pointer; }
+
+/*Customização font-size*/
+.font-s11 { font-size: 11px !important; }
+.font-s16 { font-size: 16px !important; }
+.font-s56 { font-size: 56px !important; }
+.font-s20 { font-size: 20px !important; }
+
+/*Customização table*/
+.table-fixed { table-layout: fixed; }
+
+/*Customização padding*/
+@stopIndex: 5;
+.loopPadding(@index) when (@index =< @stopIndex) {
+    .padding-@{index} { padding-bottom: ~"@{index}px"; }
+    .padding-@{index}-t { padding-top: ~"@{index}px"; }
+    .padding-@{index}-l { padding-left: ~"@{index}px"; }
+    .padding-@{index}-r { padding-right: ~"@{index}px"; }
+
+    .loopPadding(@index+1);
+}
+.loopPadding(1);
+
+@stopIndex: 50;
+.loopPadding2(@index) when (@index =< @stopIndex) {
+    .padding-@{index} { padding-bottom: ~"@{index}px"; }
+    .padding-@{index}-t { padding-top: ~"@{index}px"; }
+    .padding-@{index}-l { padding-left: ~"@{index}px"; }
+    .padding-@{index}-r { padding-right: ~"@{index}px"; }
+
+    .loopPadding2(@index+5);
+}
+.loopPadding2(10);
+/*min-width
+    md:992px
+    lg:1200px
+    sm:768px
+*/
+@media only screen and (min-width:1200px) {
+    @stopIndex: 5;
+    .loopMarginLg(@index) when (@index =< @stopIndex) {
+        .push-@{index}-lg { margin-bottom: ~"@{index}px"; }
+        .push-@{index}-t-lg { margin-top: ~"@{index}px"; }
+        .push-@{index}-l-lg { margin-left: ~"@{index}px"; }
+        .push-@{index}-r-lg { margin-right: ~"@{index}px"; }
+
+        .loopMarginLg(@index+1);
+    }
+    .loopMarginLg(1);
+
+    @stopIndex: 50;
+    .loopMarginLg2(@index) when (@index =< @stopIndex) {
+        .push-@{index}-lg { margin-bottom: ~"@{index}px"; }
+        .push-@{index}-t-lg { margin-top: ~"@{index}px"; }
+        .push-@{index}-l-lg { margin-left: ~"@{index}px"; }
+        .push-@{index}-r-lg { margin-right: ~"@{index}px"; }
+
+        .loopMarginLg2(@index+5);
+    }
+    .loopMarginLg2(10);
+}
+
+@media only screen and (min-width:992px) {
+    @stopIndex: 5;
+    .loopMarginMd(@index) when (@index =< @stopIndex) {
+        .push-@{index}-md { margin-bottom: ~"@{index}px"; }
+        .push-@{index}-t-md { margin-top: ~"@{index}px"; }
+        .push-@{index}-l-md { margin-left: ~"@{index}px"; }
+        .push-@{index}-r-md { margin-right: ~"@{index}px"; }
+
+        .loopMarginMd(@index+1);
+    }
+    .loopMarginMd(1);
+
+    @stopIndex: 50;
+    .loopMarginMd2(@index) when (@index =< @stopIndex) {
+        .push-@{index}-md { margin-bottom: ~"@{index}px"; }
+        .push-@{index}-t-md { margin-top: ~"@{index}px"; }
+        .push-@{index}-l-md { margin-left: ~"@{index}px"; }
+        .push-@{index}-r-md { margin-right: ~"@{index}px"; }
+
+        .loopMarginMd2(@index+5);
+    }
+    .loopMarginMd2(10);
+}
+
+@media only screen and (min-width:768px) {
+    @stopIndex: 5;
+    .loopMarginSm(@index) when (@index =< @stopIndex) {
+        .push-@{index}-sm { margin-bottom: ~"@{index}px"; }
+        .push-@{index}-t-sm { margin-top: ~"@{index}px"; }
+        .push-@{index}-l-sm { margin-left: ~"@{index}px"; }
+        .push-@{index}-r-sm { margin-right: ~"@{index}px"; }
+
+        .loopMarginSm(@index+1);
+    }
+    .loopMarginSm(1);
+
+    @stopIndex: 50;
+    .loopMarginSm2(@index) when (@index =< @stopIndex) {
+        .push-@{index}-sm { margin-bottom: ~"@{index}px"; }
+        .push-@{index}-t-sm { margin-top: ~"@{index}px"; }
+        .push-@{index}-l-sm { margin-left: ~"@{index}px"; }
+        .push-@{index}-r-sm { margin-right: ~"@{index}px"; }
+
+        .loopMarginSm2(@index+5);
+    }
+    .loopMarginSm2(10);
+}
+
+.initHelpers() {
+    @corEscuraPrimaria: darken(@corPrimaria, 10%);
+    @corEscuraSecundaria: darken(@corSecundaria, 10%);
+    @corEscuraTerciaria: darken(@corTerciaria, 10%);
+
+    @corClaraPrimaria: lighten(@corPrimaria, 10%);
+    @corClaraSecundaria: lighten(@corSecundaria, 10%);
+    @corClaraTerciaria: lighten(@corTerciaria, 10%);
+
+    //Barra de menu topo
+    #header-navbar { box-shadow: 0 0 5px -2px @corPrimaria !important; }
+    // Barra de menu esquerda 
+    #sidebar { background-color: @corPrimaria; box-shadow: 3px 0 10px rgba(0,0,0,0.5);
+        img#cliente-logo { width: 10%; visibility: hidden; }
+
+        img#cliente-logo-estendido { width: 80%; }
+        .nav-main-heading {
+            .sidebar-mini-hide { display: block; border-bottom: 1px solid @corSecundaria; }
+        }
+    }
+    //Header das páginas
+    header {
+        .page-heading { font-family: @fonteSecundaria; font-size: 4.8em; font-weight: 300; border-bottom: 1px solid @corPrimaria; padding-bottom: 10px; }
+    }
+    /*Customização block-header*/ .block-header { background-color: @corEscuraPrimaria; color: @corClaraTerciaria; }
+    /*Customização botões*/ .btn-primary { background-color: @corSecundaria; border-color: @corClaraPrimaria; color: @corPrimaria; cursor: pointer; font-family: @fontePrimaria, @fonteSecundaria;
+        &:hover { background-color: @corEscuraSecundaria; outline: none; }
+        &:active { background-color: @corEscuraSecundaria; outline: none; }
+        &:focus { background-color: @corEscuraSecundaria; outline: none; }
+        &:active:focus { background-color: @corEscuraSecundaria; outline: none; }
+
+        &.outline { background-color: transparent; color: @corSecundaria; border-radius: 2px; font-family: 'Open Sans'; font-weight: 500; border: 1px solid @corSecundaria; -moz-transition: 0.5s; -o-transition: 0.5s; -webkit-transition: 0.5s; transition: 0.5s;
+            &:hover { background-color: @corEscuraSecundaria; border-color: @corClaraPrimaria; color: @corPrimaria; outline: none; font-weight: 500; }
+        }
+
+        &.btn { font-size: 18px;
+            &.btn-lg { font-size: 21px; }
+        }
+
+        &.disabled { background-color: @corClaraPrimaria; border-color: @corClaraPrimaria;
+            &:hover { background-color: @corClaraPrimaria; border-color: @corClaraPrimaria; }
+        }
+    }
+
+    .btn-secondary { background-color: @corPrimaria; border-color: @corClaraPrimaria; color: @corTerciaria; cursor: pointer; font-family: @fontePrimaria;
+        &:hover { color: @corSecundaria !important; }
+        &:focus { color: @corTerciaria !important; }
+
+        &.btn { font-size: 18px;
+            &.btn-lg { font-size: 21px; }
+        }
+    }
+
+    .btn-tertiary { background-color: @corTerciaria; border: 1px solid @corPrimaria; color: @corClaraPrimaria; cursor: pointer; font-family: @fontePrimaria;
+        &:hover { background-color: @corEscuraTerciaria; color: @corPrimaria; outline: none; }
+        &:focus { background-color: @corEscuraTerciaria; color: @corPrimaria; outline: none; }
+        &.btn { font-size: 18px;
+            &.btn-lg { font-size: 21px; }
+        }
+    }
+    /*a[ui-sref] { color: @corPrimaria; }*/ /*Customização background*/
+    .bg-primary-cliente { background-color: @corPrimaria; }
+    .bg-secondary-cliente { background-color: @corSecundaria; }
+    .bg-tertiary-cliente { background-color: @corTerciaria; }
+
+    .page-footer-alternative { background-color: @corPrimaria !important; color: @corClaraPrimaria; }
+}
+
+/*Customização boder-color*/
+.border-color-cinza { border-color: #bdbdbd; }
+
+/*Customização grades do estoque*/
+.grade-estoque { font-weight: 600; color: #4a4a4a; }
+.grade-estoque-vazio { color: #ababab; }

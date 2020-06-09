@@ -16,6 +16,10 @@ namespace INFNET_F.C._API.Data.Mapping
             builder.Property(t => t.Nome).HasMaxLength(150).IsRequired();
             builder.Property(t => t.CPF).HasMaxLength(100).IsRequired();
             builder.Property(t => t.Email).HasMaxLength(350).IsRequired();
+            builder.Property(t => t.Rua).HasMaxLength(250).IsRequired();
+            builder.Property(t => t.Cidade).HasMaxLength(50).IsRequired();
+            builder.Property(t => t.Pais).HasMaxLength(50).IsRequired();
+            builder.Property(t => t.FLG_Ativo).IsRequired().HasDefaultValue(false);
             builder.ToTable(nameof(Socio));
         }
     }

@@ -1,0 +1,10 @@
+﻿<div>
+    <input type="text" class="form-control" ng-model="inputText" placeholder="Digite o que procura..." ng-keyup="updateHints()"
+           ng-blur="disableAutoComplete()"/>
+    <div style="background-color: aliceblue; position: absolute; top: 58px; z-index: 9;width: 95%; max-height:430%; border: 1px solid #ccc; overflow:scroll; overflow-x:hidden" ng-show="hintsEnabled">
+        <a style="display: block; padding: 10px;" href="javacript:void(0)"
+           ng-repeat="hint in selectedHints"
+           ng-bind="hint.nome"
+           ng-click="escolherOpcao(hint)"></a>
+    </div>
+</div>

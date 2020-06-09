@@ -1,0 +1,65 @@
+﻿<div class="suporte-view">
+    <section class="Material-contact-section section-padding section-dark">
+        <div class="container">
+            <div class="row">
+                <!-- Section Titile -->
+                <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <h1 class="section-title">Queremos te ajudar</h1>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Section Titile -->
+                <div class="col-md-5 mt-3 push-10-r-md contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
+                    <p>Caro sócio-torcedor, se tiver alguma reclamação ou algum bug para relatar sinta-se a vontade para escrever e te responderemos no seu e-mail cadastrado.</p>
+
+                    <div class="find-widget">
+                        Empresa:  <a href="#">Infnet</a>
+                    </div>
+                    <div class="find-widget">
+                        Endereço: <a href="#">Rua São José, 90</a>
+                    </div>
+                    <div class="find-widget">
+                        Telefone:  <a href="#">(21) 2122-8800</a>
+                    </div>
+
+                    <div class="find-widget">
+                        Pagina web principal:  <a href="https://www.infnet.edu.br/infnet/">www.infnet.edu.br</a>
+                    </div>
+                    <div class="find-widget">
+                        Horário: <a href="#">Seg para Dom: 07:00 AM - 11.00 PM</a>
+                    </div>
+                </div>
+                <!-- contact form -->
+                <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
+                    <form class="shake" role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
+                        <!-- Name -->
+                        <div class="form-group label-floating">
+                            <label class="control-label" for="name">Nome</label>
+                            <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name" ng-model="duvida.Nome">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                       
+                        <!-- Subject -->
+                        <div class="form-group label-floating">
+                            <label class="control-label">Assunto</label>
+                            <input class="form-control" id="msg_subject" type="text" name="subject" required data-error="Please enter your message subject" ng-model="duvida.Assunto">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- Message -->
+                        <div class="form-group label-floating">
+                            <label for="message" class="control-label">Mensagem</label>
+                            <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message" ng-model="duvida.Mensagem"></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <!-- Form Submit -->
+                        <div class="form-submit mt-5">
+                            <button class="btn btn-common" id="form-submit" ng-click="sendeInformationen()"><i class="material-icons mdi mdi-message-outline"></i> Enviar mensagem</button>
+                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

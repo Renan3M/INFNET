@@ -1,0 +1,21 @@
+﻿<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="block" id="{{blockId}}">
+                <div class="block-header">
+                    <ul class="block-options">
+                        <li>
+                            <button type="button" data-toggle="block-option" data-action="fullscreen_toggle"><i class="si si-size-fullscreen"></i></button>
+                        </li>
+                    </ul>
+                    <div class="block-title" ng-bind="title"></div>
+                </div>
+                <div class="block-content clearfix">
+                    <div class="row">
+                        <div class="col-md-12" ng-transclude></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
