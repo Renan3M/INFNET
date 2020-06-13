@@ -128,6 +128,7 @@
     <Content Include="app\app.js" />
     <Content Include="app\components\controllers\logado\dashboardController.js" />
     <Content Include="app\components\controllers\logado\financeiro\financeiroController.js" />
+    <Content Include="app\components\controllers\logado\lojaVantagens\lojaVantagensController.js" />
     <Content Include="app\components\controllers\logado\masterLogadoController.js" />
     <Content Include="app\components\controllers\logado\suporte\suporteController.js" />
     <Content Include="app\components\controllers\logado\wizard\wizardController.js" />
@@ -137,6 +138,7 @@
     <Content Include="app\components\views\financeiro\index.html" />
     <Content Include="app\components\views\logado.html" />
     <Content Include="app\components\views\login.html" />
+    <Content Include="app\components\views\lojaVantagens\index.html" />
     <Content Include="app\components\views\suporte\index.html" />
     <Content Include="app\components\views\wizard\index.html" />
     <Content Include="app\lib\core\angular-animate.min.js" />
@@ -471,7 +473,9 @@
     <Content Include="app\shared\services\usuarioService.js" />
     <Content Include="app\shared\services\utilService.js" />
     <Content Include="Content\css\less\custom-admin.css" />
-    <Content Include="Content\css\less\custom-admin.min.css" />
+    <Content Include="Content\css\less\custom-admin.min.css">
+      <DependentUpon>custom-admin.css</DependentUpon>
+    </Content>
     <Content Include="Content\css\lib\bootstrap.min.css" />
     <Content Include="Content\css\lib\demo.css" />
     <Content Include="Content\css\lib\gsdk-bootstrap-wizard.css" />
@@ -487,6 +491,7 @@
     <Content Include="Content\img\botafogo-escudo.png" />
     <Content Include="Content\img\clube-infnet.png" />
     <Content Include="Content\img\default-avatar.png" />
+    <Content Include="Content\img\estadio.jpg" />
     <Content Include="Content\img\favicon.ico" />
     <Content Include="Content\img\favicon.png" />
     <Content Include="Content\img\flamengo-escudo.png" />
@@ -833,6 +838,18 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
+    <Content Include="node_modules\angular-ui-mask\demo\index.html" />
+    <Content Include="node_modules\angular-ui-mask\dist\mask.js" />
+    <Content Include="node_modules\angular-ui-mask\dist\mask.min.js" />
+    <Content Include="node_modules\angular-ui-mask\gulpfile.js" />
+    <Content Include="node_modules\angular-ui-mask\index.js" />
+    <Content Include="node_modules\angular-ui-mask\karma.conf.js" />
+    <Content Include="node_modules\angular-ui-mask\logos\browser-stack.png" />
+    <Content Include="node_modules\angular-ui-mask\protractor.config.js" />
+    <Content Include="node_modules\angular-ui-mask\protractor.travis.config.js" />
+    <Content Include="node_modules\angular-ui-mask\src\mask.js" />
+    <Content Include="node_modules\angular-ui-mask\test\maskSpec.js" />
+    <Content Include="node_modules\angular-ui-mask\test\maskSpec.protractor.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="app\lib\plugins\ckeditor\CHANGES.md" />
@@ -847,7 +864,6 @@
     <Content Include="Content\css\less\cliente\infnet.less" />
     <Content Include="Content\css\less\cliente\clienteTeste.less" />
     <Content Include="Content\css\less\cliente\init.less" />
-    <Content Include="Content\css\less\custom-admin.less" />
     <Content Include="Content\css\less\fonts.less" />
     <Content Include="Content\css\less\helpers.less" />
     <Content Include="Content\css\less\login\login.less" />
@@ -883,6 +899,7 @@
     <Content Include="Content\js\lib\plugins\summernote\font\summernote.eot" />
     <Content Include="Content\js\lib\plugins\summernote\font\summernote.ttf" />
     <Content Include="Content\js\lib\plugins\summernote\font\summernote.woff" />
+    <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -935,6 +952,13 @@
     <Content Include="Content\js\lib\plugins\woocommerce-FlexSlider-690832b\node_modules\jquery\src\sizzle\dist\sizzle.min.map" />
     <Content Include="Content\js\lib\plugins\woocommerce-FlexSlider-690832b\package.json" />
     <Content Include="Content\js\lib\plugins\woocommerce-FlexSlider-690832b\README.md" />
+    <Content Include="node_modules\angular-ui-mask\.jshintrc" />
+    <Content Include="node_modules\angular-ui-mask\.npmignore" />
+    <Content Include="node_modules\angular-ui-mask\.travis.yml" />
+    <Content Include="node_modules\angular-ui-mask\bower.json" />
+    <Content Include="node_modules\angular-ui-mask\LICENSE" />
+    <Content Include="node_modules\angular-ui-mask\package.json" />
+    <Content Include="node_modules\angular-ui-mask\README.md" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

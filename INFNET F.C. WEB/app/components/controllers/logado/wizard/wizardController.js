@@ -23,8 +23,6 @@
     WizardController.$inject = ['$scope', 'HandlerFactoryPublico','$state'];
 
     function WizardController($scope, HandlerFactoryPublico, $state) {
-        ///* jshint validthis:true */
-
 
         $scope.Planos = [];
         $scope.finalizarCadastro = finalizarCadastro;
@@ -33,6 +31,12 @@
             return parseInt(currentValue,10);
         }
 
+        $scope.ValidaCPF = ValidaCPF;
+
+        $("#myForm").submit(function (e) {
+            e.preventDefault();
+        });
+
         HandlerFactoryPublico.inicializarPlanos().then(response => {
             if (response)
             {
@@ -40,11 +44,34 @@
             }
         });
 
+        function ValidaCPF() {
+
+            var cpfValido = /^(([0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}))$/;
+            if (cpfValido.test($scope.socio.CPF) == false) {
+
+                $scope.socio.CPF = $scope.socio.CPF.replace(/\D/g, ""); //Remove tudo o que não é dígito
+
+                if ($scope.socio.CPF.length == 11) {
+                    $scope.socio.CPF = $scope.socio.CPF.replace(/(\d{3})(\d)/, "$1.$2"); //Coloca um ponto entre o terceiro e o quarto dígitos
+                    $scope.socio.CPF = $scope.socio.CPF.replace(/(\d{3})(\d)/, "$1.$2"); //Coloca um ponto entre o terceiro e o quarto dígitos
+                    //de novo (para o segundo bloco de números)
+                    $scope.socio.CPF = $scope.socio.CPF.replace(/(\d{3})(\d{1,2})$/, "$1-$2"); //Coloca um hífen entre o terceiro e o quarto dígitos
+                } else {
+                    console.log("CPF invalido");
+                }
+
+            }
+        }
+
         function finalizarCadastro() {
             $scope.socio.PlanoId = $("input[name='optradio']:checked").val();
             $scope.socio.Pais = $("select[name='country']").val();
 
-            HandlerFactoryPublico.cadastrarSocioPlano($scope.socio).then(response => { });
+            if (!$scope.socio.PlanoId)
+                return;
+            HandlerFactoryPublico.cadastrarSocioPlano($scope.socio).then(response => {       
+            });
+            $state.go("login",);
         };
 
 
@@ -65,6 +92,9 @@
                 email: {
                     required: true,
                     minlength: 3,
+                },
+                optradio: {
+                    required: true
                 }
             }
         });
@@ -87,7 +117,7 @@
 
                 //check number of tabs and fill the entire row
                 var $total = navigation.find('li').length;
-                $width = 100 / $total;
+                $width = 95 / $total;
                 var $wizard = navigation.closest('.wizard-card');
 
                 $display_width = $(document).width();

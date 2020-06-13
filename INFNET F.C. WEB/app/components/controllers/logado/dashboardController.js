@@ -8,9 +8,13 @@
 
     function dashboardController($scope, HandlerFactoryLogado, $timeout) {
 
-        if(sessionStorage.getItem('socioAtivo') == null)
-            $scope.$emit("SweetAlertNotification", "Sócio deve finalizar sua compra", "Por favor, vá na aba financeiro e realize a compra ou o pagamento do seu plano para ter acesso à loja de vantagens.");
 
+        //$timeout
+        if (sessionStorage.getItem('socioAtivo') == null) {
+            $timeout(() => {
+                $scope.$emit("SweetAlertNotification", "Sócio deve finalizar sua compra", "Por favor, vá na aba financeiro e realize a compra ou o pagamento do seu plano para ter acesso à loja de vantagens.");
+            }, 4000);
+        }
 
         var vm = this;
         vm.title = 'dashboardController';

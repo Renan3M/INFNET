@@ -53,6 +53,12 @@
             setAll(idUsuario, nome,lstMenu);
         }
 
+        function saveMenuSessionStorage(lstMenu) {
+            sessionStorage.setItem('lstMenu', angular.toJson(lstMenu));
+
+            setLstMenu(lstMenu);
+        }
+
         function setAll(idUsuario, nome, lstMenu) {
             setIdUsuario(idUsuario);
             setNome(nome);
@@ -74,6 +80,7 @@
 
         return {
             saveToSessionStorage: saveToSessionStorage,
+            saveMenuSessionStorage: saveMenuSessionStorage,
             loadFromSessionStorage: loadFromSessionStorage,
             getSid: getSid,
             getIdUsuario: getIdUsuario,

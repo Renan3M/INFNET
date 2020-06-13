@@ -37,14 +37,21 @@
         });
 
         function login(e, dados) {
-            var menuEmpenho = [];
 
             UsuarioService.saveToSessionStorage(dados.socio.id, dados.socio.nome, dados.menus);
             
             TokenService.saveToSessionStorage(dados.token);
 
+            if (dados.socio.flG_Ativo == true) {
+                sessionStorage.setItem('socioAtivo', true);
+            }
+
             $state.go('logado.dashboard');
         }
 
+        $scope.$on('SaveMenuList', function (e, dados) {
+            UsuarioService.saveMenuSessionStorage(dados);
+        });
+        
     }
 })();

@@ -10,8 +10,10 @@ namespace INFNET_F.C._API.Models
         public int ID { get; set; }
         public Assinatura ASSINATURA_FK { get; set; }
         public int IDASSINATURA_FK { get; set; }
-        public int NumeroParcelas { get; set; }
-        public double ValorParcelas { get; set; }
+        public double ValorParcela { get; set; }
+        public double ValorTotalCobranca { get; set; }
+        public DateTime DataValidade { get; set; }
         public bool isRecorrente { get; set; }
+        public bool FLG_PAGA { get; set; }
     }
 }

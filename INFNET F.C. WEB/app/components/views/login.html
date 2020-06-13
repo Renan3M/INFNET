@@ -24,7 +24,7 @@
                         <div class="form-group">
                             <div>
                                 <label for="CPF">CPF</label>
-                                <input id="input-senha" name="input-senha" type="text" class="form-control" placeholder="000.000.000-00" ng-model="login.CPF" />
+                                <input name="cpf" type="text" class="form-control" maxlength="14" placeholder="000.000.000-00" ng-blur="login.ValidaCPF()" ng-model="login.CPF">
                             </div>
                         </div>
                     </div>

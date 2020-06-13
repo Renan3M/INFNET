@@ -4,14 +4,16 @@ using INFNET_F.C._API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace INFNET_F.C._API.Migrations
 {
     [DbContext(typeof(InfnetDBContext))]
-    partial class InfnetDBContextModelSnapshot : ModelSnapshot
+    [Migration("20200610025046_CobrancaFlgPaga")]
+    partial class CobrancaFlgPaga
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

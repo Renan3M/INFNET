@@ -1,0 +1,8 @@
+[
+  {
+    "outputFileName": "Content/css/less/custom-admin.min.css",
+    "inputFiles": [
+      "Content/css/less/custom-admin.css"
+    ]
+  }
+]

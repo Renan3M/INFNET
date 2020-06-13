@@ -4,11 +4,11 @@
             <div class="row" style="padding-left: 40px;">
                 <div style="padding-top:20px; padding-bottom:60px;">
                     <h1 style="font-size: 25px;font-weight: 400;color: #545454; display:inline-block">Plano atual: </h1>
-                    <button disabled>{{Assinatura.plano.nome}}</button><button>ALTERAR</button>
+                    <button style="margin-left:10px; font-size:20px;"class="btn btn-secondary" disabled>{{Assinatura.planO_FK.nome}}</button><button ng-hide="true" style="margin-left:10px; font-size:20px;" class="btn btn-primary" ng-if="Assinatura && !Assinatura.flG_ATIVA">ALTERAR</button>
                 </div>
                 <div style="padding-bottom:60px;">
                     <h1 style="font-size: 25px;font-weight: 400; color: #545454; display:inline-block">Status da assinatura: </h1>
-                    <button disabled>{{Assinatura.status}}</button><button>ATIVAR</button>
+                    <button style="margin-left:10px; font-size:20px;" class="btn btn-secondary" disabled>{{Assinatura.status}}</button><button style="margin-left:10px; font-size:20px;" class="btn btn-primary" ng-if="Assinatura && !Assinatura.flG_ATIVA" ng-click="ativarAssinatura()">ATIVAR</button>
                 </div>
             </div>
             <div class="row" style="padding-left: 40px;">
@@ -16,7 +16,7 @@
                 <div class="col-md-12 block">
                     <section class="push-20-t clearfix">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <a class="block block-link-hover3 text-center payment-type-block" href="javascript:void(0)" ng-click="setPaymentType('credito')" ng-class="{'selected': paymentType == 'credito'}">
+                            <a class="block block-link-hover3 text-center payment-type-block" href="javascript:void(0)" ng-click="setPaymentType('credito')" ng-class="{'selected': paymentType == 1}">
                                 <div class="block-content block-content-full">
                                     <i class="fa fa-credit-card fa-5x text-primary-darker"></i>
                                     <div class="font-w600 push-20-t payment-type-label">
@@ -28,7 +28,7 @@
                             </a>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <a class="block block-link-hover3 text-center payment-type-block" href="javascript:void(0)" ng-click="setPaymentType('boleto')" ng-class="{'selected': paymentType == 'boleto'}">
+                            <a class="block block-link-hover3 text-center payment-type-block" href="javascript:void(0)" ng-click="setPaymentType('boleto')" ng-class="{'selected': paymentType == 0}">
                                 <div class="block-content block-content-full">
                                     <i class="fa fa-barcode fa-5x text-primary-darker"></i>
                                     <div class="font-w600 push-20-t payment-type-label">
@@ -44,13 +44,13 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <h1 style="font-size: 25px;color: #545454; display:inline-block; padding-top:20px;">Cobranças</h1>
                 <hr style="height: 1px;background-color: black;opacity: 0.2;margin-top: 0px;" />
             </div>
-            <ul>
-                <li ng-repeat="cob in cobrancas">{{cob.DataInicio}}</li>
-            </ul>
+            <div class="col-md-12">
+                <div ng-repeat="cob in Cobrancas"><p class="col-md-10" ng-style="{background: cob.flG_PAGA ? 'rgba(20, 170, 20, .4)' : ''}" style="font-size: 14px; padding: 1px;">{{$index+1}}ª. Vencimento: {{cob.dataValidade | date : format : shortDate}}, valor da parcela: {{cob.valorParcela}}</p> <button class="col-md-2 btn btn-primary" style="font-size:14px; padding: 2px 4px;" ng-if="!cob.flG_PAGA" ng-click="pagarCobranca(cob.id,$index)">PAGAR</button></div>
+            </div>
         </div>
     </div>
 </section>

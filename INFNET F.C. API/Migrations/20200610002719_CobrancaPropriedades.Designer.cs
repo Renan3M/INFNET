@@ -4,14 +4,16 @@ using INFNET_F.C._API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace INFNET_F.C._API.Migrations
 {
     [DbContext(typeof(InfnetDBContext))]
-    partial class InfnetDBContextModelSnapshot : ModelSnapshot
+    [Migration("20200610002719_CobrancaPropriedades")]
+    partial class CobrancaPropriedades
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -96,9 +98,6 @@ namespace INFNET_F.C._API.Migrations
 
                     b.Property<DateTime>("DataValidade")
                         .HasColumnType("datetime2");
-
-                    b.Property<bool>("FLG_PAGA")
-                        .HasColumnType("bit");
 
                     b.Property<int>("IDASSINATURA_FK")
                         .HasColumnType("int");

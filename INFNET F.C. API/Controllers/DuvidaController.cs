@@ -40,11 +40,11 @@ namespace INFNET_F.C._API.Controllers
         {
             try
             {
-                var idDuvida = _context.Duvidas.Add(duvida).Entity.ID;
+                var Duvida = _context.Duvidas.Add(duvida).Entity;
 
-                await _context.SaveChangesAsync();
+                _context.SaveChanges();
 
-                _context.Respostas.Add(new Resposta { IDDUVIDA_FK = idDuvida, Mensagem = "Esse e-mail é uma simulação de resposta para a pergunta feita pelo sócio" });
+                _context.Respostas.Add(new Resposta { IDDUVIDA_FK = Duvida.ID, Mensagem = "Esse e-mail é uma simulação de resposta para a pergunta feita pelo sócio" });
 
                 await _context.SaveChangesAsync();
 

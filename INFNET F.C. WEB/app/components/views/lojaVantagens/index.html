@@ -1,0 +1,55 @@
+﻿<section id="view-loja">
+    <div class="row">
+        <div class="col-md-3" style="margin-top:15px; margin-left:10px;">
+            <div ng-repeat="partida in proximosJogos" ng-click="selecionarSetor(partida.id)" style="cursor: pointer;">
+                <div>
+                    <p style="font-size:15px; font-weight:bold; text-align:center">{{partida.campeonatO_FK.nome}}</p>
+                    <p style="font-size: 11px; text-align:center">{{partida.dT_PARTIDA | date : format : shortDate}}</p>
+                </div>
+                <div style="margin-right:auto; margin-left:auto; width:230px;">
+                    <img ng-src="../../../Content/img/{{partida.mandantE_FK.escudo}}" style="width: 90px; height: 90px; margin-right: 20px;" />
+                    <span class="time-vs">X</span>
+                    <img ng-src="../../../Content/img/{{partida.visitantE_FK.escudo}}" style="width:90px; height: 90px;" />
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div ng-hide="!showSetores" class="col-md-8" style="margin-left:10px; padding:0px;">
+            <h1 style="font-size: 25px;font-weight: 400; color: #545454; text-align:center;">Setores disponiveis para a partida</h1>
+            <div class="row" style="margin-top:20px;">
+                <div class="col-md-4">
+                    <p style="text-align:center;">Setor Norte Superior</p>
+                    <img src="../../../../Content/img/estadio.jpg" />
+                    <button class="btn btn-primary" style="width:240px;" ng-click="comprarIngresso()">COMPRE SEU INGRESSO</button>
+                </div>
+                <div class="col-md-4">
+                    <p style="text-align:center;">Setor Norte Inferior</p>
+                    <img src="../../../../Content/img/estadio.jpg" />
+                    <button class="btn btn-primary" style="width:240px;" ng-click="comprarIngresso()">COMPRE SEU INGRESSO</button>
+                </div>
+                <div class="col-md-4">
+                    <p style="text-align:center;">Setor Leste</p>
+                    <img src="../../../../Content/img/estadio.jpg" />
+                    <button class="btn btn-primary" style="width:240px;" ng-click="comprarIngresso()">COMPRE SEU INGRESSO</button>
+                </div>
+            </div>
+            <div class="row" style="margin-top:30px;">
+                <div class="col-md-4">
+                    <p style="text-align:center;">Setor Sul Superior</p>
+                    <img src="../../../../Content/img/estadio.jpg" />
+                    <button class="btn btn-primary" style="width:240px;" ng-click="comprarIngresso()">COMPRE SEU INGRESSO</button>
+                </div>
+                <div class="col-md-4">
+                    <p style="text-align:center;">Setor Sul Inferior</p>
+                    <img src="../../../../Content/img/estadio.jpg" />
+                    <button class="btn btn-primary" style="width:240px;" ng-click="comprarIngresso()">COMPRE SEU INGRESSO</button>
+                </div>
+                <div class="col-md-4">
+                    <p style="text-align:center;">Setor Oeste</p>
+                    <img src="../../../../Content/img/estadio.jpg" />
+                    <button class="btn btn-primary" style="width:240px;" ng-click="comprarIngresso()">COMPRE SEU INGRESSO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

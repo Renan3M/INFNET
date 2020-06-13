@@ -16,7 +16,7 @@
         vm.title = 'loginController';
         vm.validarLogin = validarLogin;
         vm.aderir = aderir;
-
+        vm.ValidaCPF = ValidaCPF;
         calcularAltura();
 
         HandlerFactoryPublico.inicializarMenus().then(x => { }).catch(error => {
@@ -38,6 +38,25 @@
                     .then(validarLoginResponse).catch(error => {
                     vm.loginIncorreto = true;
                         vm.statusMensagem = 'Usuário não existe!'; });
+
+            }
+        }
+
+        function ValidaCPF() {
+
+            var cpfValido = /^(([0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}))$/;
+            if (cpfValido.test(vm.CPF) == false) {
+
+                vm.CPF = vm.CPF.replace(/\D/g, ""); //Remove tudo o que não é dígito
+
+                if (vm.CPF.length == 11) {
+                    vm.CPF = vm.CPF.replace(/(\d{3})(\d)/, "$1.$2"); //Coloca um ponto entre o terceiro e o quarto dígitos
+                    vm.CPF = vm.CPF.replace(/(\d{3})(\d)/, "$1.$2"); //Coloca um ponto entre o terceiro e o quarto dígitos
+                    //de novo (para o segundo bloco de números)
+                    vm.CPF = vm.CPF.replace(/(\d{3})(\d{1,2})$/, "$1-$2"); //Coloca um hífen entre o terceiro e o quarto dígitos
+                } else {
+                    console.log("CPF invalido");
+                }
 
             }
         }

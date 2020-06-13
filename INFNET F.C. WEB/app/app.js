@@ -57,6 +57,12 @@
                 templateUrl: root + "financeiro/index.html",
                 controller: "FinanceiroController",
                 controllerAs: "financeiro"
+            })
+            .state('logado.loja-vantagens', {
+                url: "/loja-vantagens",
+                templateUrl: root + "lojaVantagens/index.html",
+                controller: "LojaVantagensController",
+                controllerAs: "lojaVantagens"
             });
     }
 

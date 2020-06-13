@@ -18,7 +18,7 @@
 
         function enviarInformacoes() {
             HandlerFactoryLogado.enviarDuvida($scope.duvida).then(a => {
-                $scope.$emit("SweetAlertSuccess", "Nós estamos trabalhando para te responder o mais breve possível, por favor aguarde.", null,null)
+                $scope.$emit("SweetAlertSuccess", "Mensagem enviada com sucesso.", null,null)
             })
         }
     }

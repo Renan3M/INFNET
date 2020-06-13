@@ -6,9 +6,13 @@
   {
     "outputFile": "app/shared/services/handlerFactoryPublico.es5.js",
     "inputFile": "app/shared/services/handlerFactoryPublico.js"
-  },
-  {
-    "outputFile": "Content/css/less/custom-admin.css",
-    "inputFile": "Content/css/less/custom-admin.less"
   }
+  //{
+  //  "outputFile": "Content/css/less/custom-admin.css",
+  //  "inputFile": "Content/css/less/custom-admin.less"
+  //},
+  //{
+  //  "outputFile": "Content/css/less/custom-admin2.css",
+  //  "inputFile": "Content/css/less/custom-admin2.less"
+  //}
 ]

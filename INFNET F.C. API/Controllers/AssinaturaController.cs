@@ -24,10 +24,17 @@ namespace INFNET_F.C._API.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public ActionResult<Assinatura> Get(int idSocio)
+        [HttpPost("{x}")]
+        [Route("GetAssinaturaSocio")]
+        public ActionResult<Assinatura> GetAssinaturaSocio(Socio socio)
         {
-            return _context.Assinaturas.First(x=>x.IDSOCIO_FK == idSocio);
+            return _context.Assinaturas.Where(x => x.IDSOCIO_FK == socio.ID).Select(assinatura => new Assinatura
+            {
+                PLANO_FK = new Plano { Nome = assinatura.PLANO_FK.Nome, ID = assinatura.PLANO_FK.ID },
+                FLG_ATIVA = assinatura.FLG_ATIVA,
+                ID = assinatura.ID,
+                TIPO_PAGAMENTO = assinatura.TIPO_PAGAMENTO
+            }).First();
         }
     }
 }

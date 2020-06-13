@@ -3322,3 +3322,55 @@ body.infnet .page-footer-alternative {
   background-color: #231F20 !important;
   color: #3e3739;
 }
+a.payment-type-block {
+    background: #f1f1f1;
+}
+
+    a.payment-type-block .payment-type-label {
+        font-size: 1.2em;
+        margin-bottom: 0;
+    }
+
+    a.payment-type-block.selected {
+        background: #231F20;
+    }
+
+        a.payment-type-block.selected p {
+            color: #EEB317;
+        }
+
+        a.payment-type-block.selected i {
+            color: #ffffff;
+        }
+
+.payment-flag {
+    margin-right: 5px;
+}
+
+    .payment-flag input + span {
+        width: 30px;
+        height: 21px;
+        background: url('../img/wizard/sprite-formas-pagamento-v2.png') no-repeat;
+        background-size: 200px;
+        /*&.amex { background-position: -342px 3px; }*/
+    }
+
+        .payment-flag input + span.visa {
+            background-position: -85px -58px;
+        }
+
+        .payment-flag input + span.master {
+            background-position: -170px -58px;
+        }
+
+        .payment-flag input + span.discover {
+            background-position: -42px -58px;
+        }
+
+        .payment-flag input + span.dinners {
+            background-position: -171px -118px;
+        }
+
+        .payment-flag input + span.elo {
+            background-position: 0px -88px;
+        }
